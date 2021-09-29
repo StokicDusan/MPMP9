@@ -1,0 +1,55 @@
+\documentclass[a4paper,12pt]{article}
+\textwidth 155mm
+\textheight 240mm
+\voffset -20mm
+\oddsidemargin 5mm
+\evensidemargin 5mm
+\parindent 0pt
+\parskip = .7\baselineskip
+
+\usepackage[intlimits]{amsmath}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{subfig}
+
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+
+\title{MPMP9: TAKE-AWAY TRIANGLES}
+\author{Dušan~Stokić}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{Open part of the puzzle - solution}
+Considering all the reflections and rotacions of the starting triangle, we can represent the starting three numbers such that
+\begin{gather}
+a \leq a+b \leq a+b+c  ,\label{eq:S}\\
+ a,b,c \in \mathbb{Z}.
+\end{gather}
+
+Grouping starting numbers like this, iterating the procedure, the sum of numbers will tend to
+
+\begin{gather}
+2 \cdot GCF\left(b,c\right),\label{eq:S}
+\end{gather}
+
+where \emph{GCF()} gives the greatest common factor.
+
+\section{Submittable part of the puzzle}
+
+For the sum to equal 14, we can pick any number for \emph{a} (even negative), as long as \emph{b} and \emph{c} have 7 as the greatest common factor, it will work!
+
+\section{Code}
+
+I gave it a go at writing a Python script for checking the sums which I'm sending to you, as a gift. 
+(I am aware that my code is not the best but I gave it a go!)
+
+The \emph{shift} function is added to format better the three numbers. Assigning the numbers to the upward facing triangle goes from the top, counterclockwise, while the downward facing starts from the left, again, counterclockwise.
+
+\end{document}
